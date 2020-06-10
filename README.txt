@@ -21,7 +21,7 @@ Tool set used:
     o	Cucumber
     o	Java
     o	Junit
-    o	RestAssured
+    o	SerenityRest
     o	Maven
     o	Intellij IDE
 
