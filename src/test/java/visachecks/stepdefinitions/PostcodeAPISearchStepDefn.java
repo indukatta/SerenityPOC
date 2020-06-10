@@ -21,7 +21,7 @@ public class PostcodeAPISearchStepDefn {
         statusSteps.searchPostcode(postcode);
     }
 
-    @Then("User should receive a response status : {int}")
+    @Then("^User should receive a response status : \"(\\d+)\"$")
     public void verify_response_status(int status){
         statusSteps.searchIsExecutedSuccessfully(status);
     }

@@ -18,7 +18,7 @@ public class CheckVisaSpecificationStepDefn {
         statusSteps.openUKVisaHomePage();
     }
 
-    @Given("I provide a nationality of {string}")
+    @Given("^I provide a nationality of \"([^\"]*)\"$")
     public void user_selects_nationality(String countryName){
         statusSteps.selectNationality(countryName);
     }

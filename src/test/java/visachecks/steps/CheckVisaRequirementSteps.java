@@ -2,6 +2,7 @@ package visachecks.steps;
 
 import net.thucydides.core.annotations.Step;
 import visachecks.pages.*;
+import visachecks.pages.commonpageobjects.CommonPageObjects;
 
 public class CheckVisaRequirementSteps {
 
@@ -11,6 +12,7 @@ public class CheckVisaRequirementSteps {
     VisitFamilyOptionPage familyOptionPage;
     DurationOfStayPage durationOfStayPage;
     VisaRequirementStatusDetailsPage visaStatusPage;
+    CommonPageObjects commonPageObjects;
 
     @Step
     public void openUKVisaHomePage(){
@@ -26,24 +28,27 @@ public class CheckVisaRequirementSteps {
     @Step
     public void selectVisaPurpose(String purpose){
         clickNextStep();
+        commonPageObjects.verifyQuestionText(VisaReasonPage.QUES_VISA_PURPOSE);
         visaReasonPage.selectReason(purpose);
     }
 
     @Step
     public void selectLengthOfStay(boolean isStayMoreThan6M){
         clickNextStep();
+        commonPageObjects.verifyQuestionText(DurationOfStayPage.QUES_LENGTH_OF_STAY);
         durationOfStayPage.selectDurationOfStay(isStayMoreThan6M);
     }
 
     @Step
     public void selectFamilyVisitOption(String option){
         clickNextStep();
+        commonPageObjects.verifyQuestionText(VisitFamilyOptionPage.QUES_FAMILY_VISIT);
         familyOptionPage.selectVisitFamilyOption(option);
     }
 
     @Step
     public void clickNextStep(){
-        nationalityDetailsPage.clickNextStep();
+        commonPageObjects.clickNextStep();
     }
 
     @Step

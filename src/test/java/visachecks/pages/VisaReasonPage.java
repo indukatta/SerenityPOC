@@ -8,6 +8,8 @@ import java.util.List;
 
 public class VisaReasonPage extends PageObject {
 
+    public static String QUES_VISA_PURPOSE = "What are you coming to the UK to do?";
+
     @FindBy(xpath = "//div[@class='gem-c-radio govuk-radios__item']")
     public List<WebElementFacade> rdoReasons;
 

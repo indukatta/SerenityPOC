@@ -3,6 +3,8 @@ package visachecks.steps;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ExecutedStepDescription;
+import net.thucydides.core.steps.StepEventBus;
 
 public class PostcodeAPISearchSteps {
 
@@ -20,8 +22,6 @@ public class PostcodeAPISearchSteps {
                 .contentType("application/json")
                 .header("Content-Type", "application/json")
                 .get(SerenityRest.getDefaultBasePath().concat(postcode));
-
-        System.out.println("Response -> [" + response.getBody().asString() + "]");
     }
 
     @Step
