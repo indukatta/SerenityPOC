@@ -10,11 +10,18 @@ public class CommonPageObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Next step')]")
     public WebElementFacade btnNextStep;
 
-    @FindBy(tagName = "legend")
+    @FindBy(xpath = "//button[contains(text(),'Continue')]")
+    public WebElementFacade btnContinue;
+
+    @FindBy(tagName = "h1")
     public WebElementFacade txtQuestion;
 
     public void clickNextStep(){
         btnNextStep.click();
+    }
+
+    public void clickContinue(){
+        btnContinue.click();
     }
 
     public void verifyQuestionText(String question){

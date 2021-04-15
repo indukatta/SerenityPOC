@@ -45,7 +45,7 @@ public class CheckVisaSpecificationStepDefn {
 
     @When("I submit the form")
     public void user_submit_the_form(){
-        statusSteps.clickNextStep();
+        statusSteps.clickContinue();
     }
 
     @Then("I will be informed {}")

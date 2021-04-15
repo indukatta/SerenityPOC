@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 public class HomePage extends PageObject {
 
-    @FindBy(xpath = "//button[contains(.,'Accept all cookies')]")
+    @FindBy(xpath = "//button[contains(.,'Accept additional cookies')]")
     WebElementFacade btnCookie;
 
     public void clickAcceptCookies(){

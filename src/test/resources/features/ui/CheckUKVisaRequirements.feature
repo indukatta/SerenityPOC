@@ -9,8 +9,8 @@ Feature: Check visa requirement
     When I submit the form
     Then I will be informed '<message>'
     Examples:
-      | countryName | purpose  | message                                    |
-      | Japan       | Tourism  | You won’t need a visa to come to the UK    |
+      | countryName | purpose  | message                                       |
+      | Japan       | Tourism  | You will not need a visa to come to the UK    |
 
   Scenario Outline: Check UK visa information status for Russian nationality and Tourism purpose
     Given I provide a nationality of "<countryName>"

@@ -27,21 +27,21 @@ public class CheckVisaRequirementSteps {
 
     @Step
     public void selectVisaPurpose(String purpose){
-        clickNextStep();
+        clickContinue();
         commonPageObjects.verifyQuestionText(VisaReasonPage.QUES_VISA_PURPOSE);
         visaReasonPage.selectReason(purpose);
     }
 
     @Step
     public void selectLengthOfStay(boolean isStayMoreThan6M){
-        clickNextStep();
+        clickContinue();
         commonPageObjects.verifyQuestionText(DurationOfStayPage.QUES_LENGTH_OF_STAY);
         durationOfStayPage.selectDurationOfStay(isStayMoreThan6M);
     }
 
     @Step
     public void selectFamilyVisitOption(String option){
-        clickNextStep();
+        clickContinue();
         commonPageObjects.verifyQuestionText(VisitFamilyOptionPage.QUES_FAMILY_VISIT);
         familyOptionPage.selectVisitFamilyOption(option);
     }
@@ -49,6 +49,11 @@ public class CheckVisaRequirementSteps {
     @Step
     public void clickNextStep(){
         commonPageObjects.clickNextStep();
+    }
+
+    @Step
+    public void clickContinue(){
+        commonPageObjects.clickContinue();
     }
 
     @Step
